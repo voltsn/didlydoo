@@ -1,9 +1,15 @@
 .main-header{
     display: flex;
     justify-content: center;
+    background-color: #2180D1;
 }
 
 .new-event-btn{
     padding: 1em;
     cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: lightblue;
+    width: 100%;
+    margin-top: 1vh;
 }
