@@ -33,6 +33,8 @@ button {
 }
 
 .event-form {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(236, 231, 231);
   padding: 20px;
   border-radius: 5%;
@@ -43,12 +45,41 @@ button {
 }
 .event-form .form-text-input {
   border: black;
+  padding: 2vw;
 }
 .event-form .form-control {
-  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 1vh;
+}
+
+.cross {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transform: scale(1.3);
+}
+.cross::before {
+  background: #888;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 70%;
+  height: 6%;
+  top: 47%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+.cross::after {
+  background: #888;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 6%;
+  height: 70%;
+  left: 47%;
+  top: 15%;
+  transform: rotate(45deg);
 }
 
 .event__heading {
