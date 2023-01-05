@@ -1,20 +1,35 @@
 .event__heading{
     font-size: 1.5rem;
     color :black;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .event__desc{
     font-size: 1rem;
     color : black;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .event__table{
     border-collapse: collapse;
     border: 1px solid;
     border-color: $bleu_clair;
+    margin : 2rem;
+    padding : 1.2rem;
 }
 
 .event__table__header-group{
     background-color: $bleu_fonce;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
+
+.event__table__antendee__name{
+    font-family: 'Roboto', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+} 
