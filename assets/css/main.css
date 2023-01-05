@@ -1,17 +1,113 @@
-/* Error: expected "{".
- *   ,
- * 5 | @import "partials/form";
- *   |                        ^
- *   '
- *   src\sass\main.scss 5:24  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 5 \2502  @import "partials/form";\d\a   \2502                         ^\a   \2575 \a   src\\sass\\main.scss 5:24  root stylesheet';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+html {
+  box-sizing: border-box;
+  min-height: 100%;
 }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+.main-header {
+  display: flex;
+  padding: 10% 0% 10% 0%;
+  margin-bottom: 5%;
+  justify-content: center;
+  background: #2180D1;
+}
+.main-header .main-header__img {
+  width: 50%;
+}
+
+.new-event-btn-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+.new-event-btn-container .new-event-btn {
+  padding: 2%;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: #f2d022;
+  width: 30%;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: rgb(236, 231, 231);
+  padding: 20px;
+  border-radius: 5%;
+}
+.event-form .form-submit-btn {
+  padding: 0.5vh;
+  cursor: pointer;
+}
+.event-form .form-text-input {
+  border: black;
+  padding: 2vw;
+}
+.event-form .form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh;
+}
+
+.cross {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transform: scale(1.3);
+}
+.cross::before {
+  background: #888;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 70%;
+  height: 6%;
+  top: 47%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+.cross::after {
+  background: #888;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 6%;
+  height: 70%;
+  left: 47%;
+  top: 15%;
+  transform: rotate(45deg);
+}
+
+.event__heading {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.event__desc {
+  font-size: 1rem;
+  color: black;
+}
+
+.event__table {
+  border-collapse: collapse;
+}
+
+/*# sourceMappingURL=main.css.map */
