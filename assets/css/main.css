@@ -19,4 +19,25 @@
   margin-top: 1vh;
 }
 
+#event-form {
+  background-color: rgb(236, 231, 231);
+  padding: 20px;
+  border-radius: 5%;
+}
+
+.form-submit-btn {
+  padding: 0.5vh;
+  cursor: pointer;
+}
+
+.form-text-input {
+  border: black;
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+  margin: 1vh;
+}
+
 /*# sourceMappingURL=main.css.map */
