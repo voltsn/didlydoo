@@ -10,5 +10,11 @@
 
 .event__table{
     border-collapse: collapse;
-    
+    border: 1px solid;
+    border-color: $bleu_clair;
+}
+
+.event__table__header-group{
+    background-color: $bleu_fonce;
+    color: white;
 }

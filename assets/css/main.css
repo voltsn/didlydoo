@@ -31,6 +31,13 @@
 
 .event__table {
   border-collapse: collapse;
+  border: 1px solid;
+  border-color: #0511F2;
+}
+
+.event__table__header-group {
+  background-color: #243CBF;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
