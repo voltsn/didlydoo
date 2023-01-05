@@ -16,76 +16,79 @@
         <section class="event">
             <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
             <p class="event__desc">Come feast with me, there will be free kosher food.</p>
-            <table>
-                <thead>
+            <table class="event__table">
+                <thead class="event__table__header-group">
                     <th></th>
-                    <th>11/12/2024</th>
-                    <th>07/01/2025</th>
+                    <th class="event__table__header">11/12/2024</th>
+                    <th class="event__table__header">07/01/2025</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Michou</td>
-                        <td>x</td>
-                        <td>x</td>
+                <tbody class="event__table__antendees">
+                    <tr class="event__table__antendee">
+                        <td class="event__table__antendee__name">Michou</td>
+                        <td class="event__table__antendee__choice">x</td>
+                        <td class="event__table__antendee__choice">x</td>
                     </tr>
-                    <tr>
-                        <td>Barbara</td>
-                        <td>x</td>
-                        <td>x</td>
+                    <tr class="event__table__antendee">
+                        <td class="event__table__antendee__name">Barbara</td>
+                        <td class="event__table__antendee__choice">x</td>
+                        <td class="event__table__antendee__choice">x</td>
                     </tr>
-                    <tr>
-                        <td>Kevin Spicy</td>
-                        <td>x</td>
-                        <td>x</td>
+                    <tr class="event__table__antendee">
+                        <td class="event__table__antendee__name">Kevin Spicy</td>
+                        <td class="event__table__antendee__choice">x</td>
+                        <td class="event__table__antendee__choice">x</td>
                     </tr>
                 </tbody>
-                <tfoot>
+                <tfoot class="event__table__footer">
                     <tr>
-                        <td><input type="text" name="attendee" placeholder="Name"></td>
+                        <td><input class="attendee-input" type="text" name="attendee" placeholder="Name"></td>
                         <td>
-                            <div>
-                                <label>Yes</label>
+                            <div class="form-control">
+                                <label class="form-label">Yes</label>
                                 <input type="checkbox" name="choice" >
                             </div>
-                            <div>
-                                <label>No</label>
+                            <div class="form-control">
+                                <label class="form-label">No</label>
                                 <input type="checkbox" name="choice" >
                             </div>
                         </td>
                         <td>
-                            <div>
-                                <label>Yes</label>
+                            <div class="form-control">
+                                <label class="form-label">Yes</label>
                                 <input type="checkbox" name="choice" >
                             </div>
-                            <div>
-                                <label>No</label>
+                            <div class="form-control">
+                                <label class="form-label">No</label>
                                 <input type="checkbox" name="choice">
                             </div>
+                        </td>
+                        <td>
+                            <button id="save-choice-btn" class="save-choice-btn" >Save</button>
                         </td>
                     </tr>
                 </tfoot>
             </table>
-            <button>Delete</button>
+            <button id="event-delete-btn" class="event__delete-btn">Delete</button>
         </section>
-        <form method="post">
-            <div>
-                <label for="author">Author:</label>
-                <input type="text" name="author" id="author" required>
+        <form method="post" id="event-form">
+            <div class="form-control">
+                <label class="form-label" for="author">Author:</label>
+                <input class="form-text-input" type="text" name="author" id="author" required>
             </div>
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
+            <div class="form-control">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-text-input" type="text" name="name" id="name" required>
             </div>
-            <div>
-                <label for="description">Description:</label>
-                <input type="text" name="description" id="description" required>
+            <div class="form-control">
+                <label class="form-label" for="description">Description:</label>
+                <input class="form-text-input" type="text" name="description" id="description" required>
             </div>
-            <div>
-                <label for="date">Date:</label>
-                <input type="date" name="date" id="date" required>
+            <div class="form-control">
+                <label class="form-label" for="date">Date:</label>
+                <input class="form-text-input" type="date" name="date" id="date" required>
             </div>
-            <div>
-                <input type="submit" value="Submit">
+            <div class="form-control">
+                <input class="form-submit-btn" class="form-submit" type="submit" value="Submit">
             </div>
         </form>
     </main>

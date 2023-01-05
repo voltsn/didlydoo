@@ -19,4 +19,18 @@
   margin-top: 1vh;
 }
 
+.event__heading {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.event__desc {
+  font-size: 1rem;
+  color: black;
+}
+
+.event__table {
+  border-collapse: collapse;
+}
+
 /*# sourceMappingURL=main.css.map */
