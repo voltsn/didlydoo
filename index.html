@@ -7,6 +7,85 @@
     <title>Didlydoo</title>
 </head>
 <body>
-    
+    <header class="main-header">
+        <img class="main-header__img" src="" alt="logo">
+    </header>
+    <main>
+        <button class="new-event-btn">Add an Event</button>
+        <section class="event">
+            <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
+            <p class="event__desc">Come feast with me, there will be free kosher food.</p>
+            <table>
+                <thead>
+                    <th>11/12/2024</th>
+                    <th>07/01/2025</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Michou</td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+                    <tr>
+                        <td>Barbara</td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Spicy</td>
+                        <td>x</td>
+                        <td>x</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><input type="text" name="attendee" placeholder="Name"></td>
+                        <td>
+                            <div>
+                                <label>Yes</label>
+                                <input type="checkbox" name="choice" >
+                            </div>
+                            <div>
+                                <label>No</label>
+                                <input type="checkbox" name="choice" >
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <label>Yes</label>
+                                <input type="checkbox" name="choice" >
+                            </div>
+                            <div>
+                                <label>No</label>
+                                <input type="checkbox" name="choice">
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button>Delete</button>
+        </section>
+        <form method="post">
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author" required>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description" required>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
 </body>
 </html>
