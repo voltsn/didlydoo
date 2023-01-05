@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+}
+
+.new-event-btn {
+  padding: 1em;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
