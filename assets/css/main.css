@@ -32,24 +32,22 @@ button {
   margin-top: 1vh;
 }
 
-#event-form {
+.event-form {
   background-color: rgb(236, 231, 231);
   padding: 20px;
   border-radius: 5%;
 }
-
-.form-submit-btn {
+.event-form .form-submit-btn {
   padding: 0.5vh;
   cursor: pointer;
 }
-
-.form-text-input {
+.event-form .form-text-input {
   border: black;
 }
-
-.form-control {
+.event-form .form-control {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin: 1vh;
 }
 
