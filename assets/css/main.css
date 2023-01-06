@@ -97,37 +97,98 @@ button {
 }
 
 .event__heading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: black;
   font-family: "Roboto", sans-serif;
+  margin: 3rem;
 }
 
 .event__desc {
   font-size: 1rem;
   color: black;
   font-family: "Roboto", sans-serif;
+  font-style: italic;
+  margin: 3rem;
 }
 
 .event__table {
   border-collapse: collapse;
-  border: 1px solid;
-  border-color: #0511F2;
-  margin: 2rem;
-  padding: 1.2rem;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 3rem;
 }
-
-.event__table__header-group {
+.event__table th {
+  width: 40vw;
+}
+.event__table td {
+  width: 40vw;
+}
+.event__table .event__table__header-group {
   background-color: #243CBF;
   color: white;
+}
+.event__table .event__table__header-group .event__table__header {
   font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.8rem;
 }
 
-.event__table__antendee__name {
+.event__table__antendee {
   font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  height: 3rem;
+}
+.event__table__antendee .event__table__antendee__name {
+  padding: 1rem;
+}
+.event__table__antendee .event__table__antendee__choice {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+.event__table__footer .attendee-input {
+  color: #243CBF;
+  font-style: italic;
+  padding: 0.4rem;
+  border-radius: 10px;
+  width: 30vw;
+}
+.event__table__footer .form-control {
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-left: 2rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.event__table__footer .form-control input {
+  margin-left: 1.2rem;
+}
+
+.content-save-choice-btn {
+  display: flex;
+  justify-content: center;
+}
+.content-save-choice-btn .save-choice-btn {
+  font-family: "Roboto", sans-serif;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: #F2E205;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+}
+.content-save-choice-btn .save-choice-btn:hover {
+  background: #F2D022;
+}
+.content-save-choice-btn .save-choice-btn:active {
+  background: #0511F2;
 }
 
 /*# sourceMappingURL=main.css.map */

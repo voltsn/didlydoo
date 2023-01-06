@@ -1,35 +1,137 @@
+
 .event__heading{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color :black;
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
+    margin : 3rem;
 
 }
 
 .event__desc{
     font-size: 1rem;
     color : black;
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
+    font-style: italic;
+    margin: 3rem;
 
 }
+
 
 .event__table{
     border-collapse: collapse;
-    border: 1px solid;
-    border-color: $bleu_clair;
-    margin : 2rem;
-    padding : 1.2rem;
-}
+    overflow:hidden ;
+    border-radius: 15px;
+    padding : 1rem;
+    margin : 3rem;
+    
+    th{
+        width : 40vw;
+        
+    }
 
-.event__table__header-group{
+    td{
+        width : 40vw;
+    }
+
+    
+    .event__table__header-group{
     background-color: $bleu_fonce;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    
+    
+
+        .event__table__header{
+        font-family: $roboto;
+        font-size : 1.2rem;
+        padding : 0.8rem;
+        }
+    
+    }
+
 }
 
-.event__table__antendee__name{
-    font-family: 'Roboto', sans-serif;
+.event__table__antendee{
+    font-family: $roboto;
+    font-size: 1.2rem;
+    height : 3rem;
+   
+
+    .event__table__antendee__name{
+    padding : 1rem;
+
+    }
+    .event__table__antendee__choice{
+    font-family: $roboto;
+    text-align: center;
+    }
+    
+    
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
 } 
+
+
+.event__table__footer{
+    //position : relative;
+    //padding-bottom: 50rem;
+
+   
+    
+
+    .attendee-input{
+        color : $bleu_fonce;
+        font-style: italic;
+        padding: 0.4rem;
+        border-radius: 10px;
+        width : 30vw;
+        
+    }
+
+    .form-control{
+        align-items: center;
+        font-family: $roboto ;
+        padding-left: 2rem;
+        padding-top:0.6rem;
+        padding-bottom:0.6rem;
+
+        input{
+           margin-left: 1.2rem;
+           
+        }
+    }
+
+    
+    
+}
+.content-save-choice-btn{
+    display: flex;
+    justify-content: center;
+    .save-choice-btn{
+        //position : absolute;
+        //bottom : -10vw;
+        //left: 2vw;
+        //margin-left: -77vw;
+        //margin-bottom: -35vw;
+        font-family: $roboto;
+        padding: 1rem;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        background-color: $jaune_clair;
+        width: 8rem;
+        display: flex;
+        justify-content: center;
+    
+        &:hover{
+            background: $jaune_fonce;
+        }
+    
+        &:active{
+            background: $bleu_clair;
+        }
+        }
+}
+
+
