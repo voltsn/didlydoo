@@ -5,7 +5,8 @@ let save = document.querySelector('#save-choice-btn');
 save.addEventListener('click', addLine)
 
 function addLine() {
-
+    let input = document.querySelector('.attendee-input');
+    let inputValue = input.value;
 
     let tbody = document.querySelector('.event__table__antendees');
     fetch('package.json')
