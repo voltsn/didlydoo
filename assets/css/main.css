@@ -38,7 +38,7 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  background-color: #f2d022;
+  background-color: #F2E205;
   width: 30%;
 }
 
@@ -65,6 +65,7 @@ button {
 .event-form .form-text-input {
   border: black;
   padding: 2vw;
+  outline: 1px solid white;
 }
 .event-form .form-control {
   display: flex;
