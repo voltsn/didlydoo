@@ -25,7 +25,7 @@ button {
   background: #2180D1;
 }
 .main-header .main-header__img {
-  width: 50%;
+  width: 40%;
 }
 
 .new-event-btn-container {
@@ -38,10 +38,21 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 20px;
-  background-color: #f2d022;
-  width: 30%;
+  background-color: #F2E205;
+  width: 20vw;
 }
 
+@media screen and (min-width: 620px) {
+  .main-header {
+    padding: 0;
+  }
+  .main-header__img {
+    height: 7em;
+  }
+  .new-event-btn {
+    height: 4em;
+  }
+}
 .event-form {
   display: none;
   flex-direction: column;
@@ -49,7 +60,7 @@ button {
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  background-color: rgb(236, 231, 231);
+  background-color: rgb(221, 217, 217);
   padding: 20px;
   border-radius: 5%;
 }
@@ -60,6 +71,7 @@ button {
 .event-form .form-text-input {
   border: black;
   padding: 2vw;
+  outline: 1px solid white;
 }
 .event-form .form-control {
   display: flex;
@@ -69,8 +81,8 @@ button {
 
 .cross {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   transform: scale(1.3);
 }
 .cross::before {
@@ -96,6 +108,11 @@ button {
   transform: rotate(45deg);
 }
 
+@media screen and (min-width: 620px) {
+  .event-form .form-text-input {
+    padding: 1vw;
+  }
+}
 .event__heading {
   font-size: 2rem;
   color: black;
