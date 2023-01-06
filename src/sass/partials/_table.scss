@@ -32,14 +32,10 @@
     td{
         width : 40vw;
     }
-
     
-    .event__table__header-group{
+.event__table__header-group{
     background-color: $bleu_fonce;
     color: white;
-    
-    
-
         .event__table__header{
         font-family: $roboto;
         font-size : 1.2rem;
@@ -54,18 +50,15 @@
     font-family: $roboto;
     font-size: 1.2rem;
     height : 3rem;
-   
 
     .event__table__antendee__name{
     padding : 1rem;
-
     }
+    
     .event__table__antendee__choice{
     font-family: $roboto;
     text-align: center;
     }
-    
-    
 }
 
 tr:nth-child(even) {
@@ -77,16 +70,12 @@ tr:nth-child(even) {
     //position : relative;
     //padding-bottom: 50rem;
 
-   
-    
-
     .attendee-input{
         color : $bleu_fonce;
         font-style: italic;
         padding: 0.4rem;
         border-radius: 10px;
         width : 30vw;
-        
     }
 
     .form-control{
@@ -98,12 +87,8 @@ tr:nth-child(even) {
 
         input{
            margin-left: 1.2rem;
-           
         }
     }
-
-    
-    
 }
 
 
