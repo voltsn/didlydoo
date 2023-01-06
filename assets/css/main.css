@@ -28,20 +28,6 @@ button {
   width: 40%;
 }
 
-.new-event-btn-container {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 5%;
-}
-.new-event-btn-container .new-event-btn {
-  padding: 2%;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  background-color: #F2E205;
-  width: 20vw;
-}
-
 @media screen and (min-width: 620px) {
   .main-header {
     padding: 0;
@@ -204,6 +190,20 @@ tr:nth-child(even) {
   margin-left: 1.2rem;
 }
 
+.new-event-btn-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+.new-event-btn-container .new-event-btn {
+  padding: 2%;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: #F2E205;
+  width: 20vw;
+}
+
 .content-save-choice-btn {
   display: flex;
   justify-content: center;
@@ -224,6 +224,26 @@ tr:nth-child(even) {
 }
 .content-save-choice-btn .save-choice-btn:active {
   background: #0511F2;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 1rem 0;
+  gap: 3rem;
+}
+
+.event__delete-btn, .event__edit-btn {
+  font-family: "Roboto", sans-serif;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.event__edit-btn {
+  background-color: gray;
 }
 
 /*# sourceMappingURL=main.css.map */

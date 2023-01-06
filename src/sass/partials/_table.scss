@@ -105,33 +105,5 @@ tr:nth-child(even) {
     
     
 }
-.content-save-choice-btn{
-    display: flex;
-    justify-content: center;
-    .save-choice-btn{
-        //position : absolute;
-        //bottom : -10vw;
-        //left: 2vw;
-        //margin-left: -77vw;
-        //margin-bottom: -35vw;
-        font-family: $roboto;
-        padding: 1rem;
-        cursor: pointer;
-        border: none;
-        border-radius: 20px;
-        background-color: $jaune_clair;
-        width: 8rem;
-        display: flex;
-        justify-content: center;
-    
-        &:hover{
-            background: $jaune_fonce;
-        }
-    
-        &:active{
-            background: $bleu_clair;
-        }
-        }
-}
 
 

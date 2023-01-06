@@ -10,19 +10,6 @@
         width: 40%;
     }
 }
-.new-event-btn-container{
-    display: flex;
-    justify-content: $center;
-    padding-bottom: 5%;
-    .new-event-btn{
-        padding: 2%;
-        cursor: pointer;
-        border: none;
-        border-radius: 20px;
-        background-color: $jaune_clair;
-        width: 20vw;
-    }
-}
 
 @media screen and (min-width:620px){
     .main-header{
