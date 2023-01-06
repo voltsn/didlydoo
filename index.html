@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/form.js" defer></script>
+    <script src="assets/js/form.js" defer type="module"></script>
     <title>Didlydoo</title>
 </head>
 <body>
@@ -72,6 +72,7 @@
                 </tfoot>
             </table>
             <button id="event-delete-btn" class="event__delete-btn">Delete</button>
+            <button id="event-edit-btn" class="event__edit-btn">Edit</button>
         </section>
         <form method="post" id="event-form" class="event-form">
             <div class="cross">
@@ -92,6 +93,7 @@
             <div class="form-control">
                 <label class="form-label" for="date">Date:</label>
                 <input class="form-text-input" type="date" name="date" id="date" required>
+                <button class="add-date-btn" id="add-date-btn">Add date</button>
             </div>
             <div class="form-control">
                 <input class="form-submit-btn" class="form-submit" type="submit" value="Submit">

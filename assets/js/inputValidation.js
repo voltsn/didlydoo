@@ -1,19 +1,31 @@
 function checkLength(string){
-    return string >= 256;
+    return string.length < 256;
 }
 
-function isInputValid(input, optional = true) {
-    if (input === "" && optional){
-        return false;
+function isInputValid(input, optional = false) {
+    if (optional){
+        if (input === "") {
+            return null;
+        }
+
+        if (checkLength(input)) {
+            return null;
+        }
+
+        return "length";
     }
 
-    return checkLength(input);
+    if (input === "") {
+        return "empty";
+    }
+
+    return checkLength(input) ? null : "length";
 }
 
 function isDateValid(date) {
     const today = new Date().getTime();
     const userDate = new Date(date).getTime();
-    return today < userDate;
+    return today < userDate ? null : "past date";
 }
 
 export {isInputValid, isDateValid};
