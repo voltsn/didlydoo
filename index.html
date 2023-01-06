@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/form.js" defer type="module"></script>
+    <script src="assets/js/form.js" defer></script>
+    <script src="assets/js/availability.js" defer></script>
     <title>Didlydoo</title>
 </head>
 <body>
     <header class="main-header">
         <img class="main-header__img" src="assets/images/logo.png" alt="logo">
     </header>
+
     <main>
         <div class="new-event-btn-container"> 
             <button class="new-event-btn">Add an Event</button>
         </div>
+
     <section class="event">
             <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
             <p class="event__desc">Come feast with me, there will be free kosher food.</p>
@@ -47,37 +50,40 @@
                         <td><input class="attendee-input" type="text" name="attendee" placeholder="Name"></td>
                         <td>
                             <div class="form-control">
-                                <label class="form-label">Yes</label>
-                                <input type="checkbox" name="choice" >
+                                <label for="choice" class="form-label">Yes</label>
+                                <input type="radio" name="choice" >
                             </div>
                             <div class="form-control">
-                                <label class="form-label">No</label>
-                                <input type="checkbox" name="choice" >
+                                <label for="choice" class="form-label">No</label>
+                                <input type="radio" name="choice">
                             </div>
                         </td>
                         <td>
                             <div class="form-control">
-                                <label class="form-label">Yes</label>
-                                <input type="checkbox" name="choice" >
+                                <label for="choice" class="form-label">Yes</label>
+                                <input type="radio" name="choice">
                             </div>
                             <div class="form-control">
-                                <label class="form-label">No</label>
-                                <input type="checkbox" name="choice">
+                                <label for="choice" class="form-label">No</label>
+                                <input type="radio" name="choice">
                             </div>
                         </td>
-                        <td>
-                            <button id="save-choice-btn" class="save-choice-btn" >Save</button>
-                        </td>
+                        
                     </tr>
                 </tfoot>
             </table>
+            <div class="content-save-choice-btn">
+                <button id="save-choice-btn" class="save-choice-btn" >Save</button>
+            </div>
+
             <button id="event-delete-btn" class="event__delete-btn">Delete</button>
             <button id="event-edit-btn" class="event__edit-btn">Edit</button>
         </section>
+
         <form method="post" id="event-form" class="event-form">
             <div class="cross">
   
-</div>
+            </div>
             <div class="form-control">
                 <label class="form-label" for="author">Author:</label>
                 <input class="form-text-input" type="text" name="author" id="author" required>
@@ -88,7 +94,7 @@
             </div>
             <div class="form-control">
                 <label class="form-label" for="description">Description:</label>
-                <input class="form-text-input" type="text" name="description" id="description" required>
+                <textarea class="form-text-input" maxlength="256" type="text" name="description" id="description" required></textarea>
             </div>
             <div class="form-control">
                 <label class="form-label" for="date">Date:</label>
@@ -99,6 +105,7 @@
                 <input class="form-submit-btn" class="form-submit" type="submit" value="Submit">
             </div>
         </form>
+        
     </main>
 </body>
 </html>
