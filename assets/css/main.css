@@ -72,6 +72,7 @@ button {
   border: black;
   padding: 2vw;
   outline: 1px solid white;
+  margin-bottom: 10px;
 }
 .event-form .form-control {
   position: relative;
