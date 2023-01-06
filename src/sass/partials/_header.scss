@@ -4,15 +4,15 @@
     display: flex;
     padding: 10% 0% 10% 0%;
     margin-bottom: 5%;
-    justify-content: center;
-    background: #2180D1;
+    justify-content: $center;
+    background: $fond;
     .main-header__img{
         width: 50%;
     }
 }
 .new-event-btn-container{
     display: flex;
-    justify-content: center;
+    justify-content: $center;
     padding-bottom: 5%;
     .new-event-btn{
         padding: 2%;
