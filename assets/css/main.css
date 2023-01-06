@@ -130,11 +130,19 @@ button {
     padding: 1vw;
   }
 }
+.event {
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  margin: 3rem;
+  padding: 3rem;
+}
+
 .event__heading {
   font-size: 2rem;
   color: black;
   font-family: "Roboto", sans-serif;
-  margin: 3rem;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .event__desc {
@@ -142,7 +150,8 @@ button {
   color: black;
   font-family: "Roboto", sans-serif;
   font-style: italic;
-  margin: 3rem;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .event__table {
@@ -150,7 +159,7 @@ button {
   overflow: hidden;
   border-radius: 15px;
   padding: 1rem;
-  margin: 3rem;
+  margin: 0.5rem;
 }
 .event__table th {
   width: 40vw;
@@ -164,7 +173,7 @@ button {
 }
 .event__table .event__table__header-group .event__table__header {
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.8rem;
 }
 
@@ -191,15 +200,17 @@ tr:nth-child(even) {
   padding: 0.4rem;
   border-radius: 10px;
   width: 30vw;
+  margin-left: 0.5rem;
 }
 .event__table__footer .form-control {
-  align-items: center;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   padding-left: 2rem;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
 }
 .event__table__footer .form-control input {
+  transform: translateX(0.5rem);
   margin-left: 1.2rem;
 }
 
