@@ -6,22 +6,6 @@ save.addEventListener('click', addLine)
 
 function addLine() {
 
-    //récupérer valeur de l'input
-    let input = document.querySelector('.attendee-input');
-    let inputValue = input.value;
-        input.value = "";
-
-    //recupérer valeur du radio
-    let choise1 = document.querySelector('input[name="yes"]');
-    console.log(choise1);
-
-    if (choise1 == true) {
-        let td1 = document.querySelector('.event__table__antendee__choice');
-        td1.textContent = "V";
-    } else {
-        let td1 = document.querySelector('.event__table__antendee__choice');
-        td1.textContent = "X";
-    }
 
     let tbody = document.querySelector('.event__table__antendees');
     fetch('package.json')
