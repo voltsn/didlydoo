@@ -45,7 +45,7 @@
                         <td class="event__table__antendee__choice">x</td>
                     </tr>
                 </tbody>
-                <tfoot class="event__table__footer">
+                <!-- <tfoot class="event__table__footer">
                     <tr>
                         <td><input class="attendee-input" type="text" name="attendee" placeholder="Name"></td>
                         <td>
@@ -70,11 +70,39 @@
                         </td>
                         
                     </tr>
-                </tfoot>
+                </tfoot> -->
             </table>
-            <div class="content-save-choice-btn">
-                <button id="save-choice-btn" class="save-choice-btn" >Save</button>
-            </div>
+            <form action="post" class="availability-form">
+                <input type="text" name="username" class="attendee-input" placeholder="Name" required>
+                <div class="choice">
+                    <div class="form-control">
+                        <label for="11/12/2024" class="form-label">Yes</label>
+                        <input type="radio" name="11/12/2024" value="yes">
+                    </div>
+    
+                    <div class="form-control">
+                        <label for="11/12/2024" class="form-label">No</label>
+                        <input type="radio" name="11/12/2024" value="yes">
+                    </div>
+                </div>
+
+                <div class="choice">
+                    <div class="form-control">
+                        <label for="07/01/2025" class="form-label">Yes</label>
+                        <input type="radio" name="07/01/2025" value="yes">
+                    </div>
+    
+                    <div class="form-control">
+                        <label for="07/01/2025" class="form-label">No</label>
+                        <input type="radio" name="07/01/2025" value="yes">
+                    </div>
+                </div>
+ 
+
+                <div class="content-save-choice-btn">
+                    <button id="save-choice-btn" class="save-choice-btn" >Save</button>
+                </div>
+            </form>
 
             <button id="event-delete-btn" class="event__delete-btn">Delete</button>
             <button id="event-edit-btn" class="event__edit-btn">Edit</button>
