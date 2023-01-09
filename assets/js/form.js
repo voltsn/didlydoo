@@ -77,37 +77,7 @@ function handleFormSubmit(event) {
     const textInputs = this.querySelectorAll("input[type=text]");
     const dateInputs = this.querySelectorAll("input[type=date]");
     let toSubmit = true;
-
-    // let data = new FormData(form);
-    // let xhr = new XMLHttpRequest();
-    // xhr.open('POST', 'http://localhost:3000/api/events/');
-    // xhr.send(data);
-    // xhr.onload = function () {
-    //     if(xhr.status === 200){
-    //         console.log(true);
-    //     } else {
-    //         console.log(false);
-    //     }
-    // }
-
-    async function postData (url = "", data ={}) {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        console.log(response);
-        return response.json();
-        
-    }
-    postData('http://localhost:3000/api/events/', { "name": nameValue(), "description": descValue(), "author": authorValue(), "dates": dateValue()})
-        .then((data) => {
-        console.log(data);
-    });
-
+    
     for (let textInput of textInputs) {
         let error = isInputValid(textInput.value);
         inputStatus(error, textInput);
@@ -124,6 +94,29 @@ function handleFormSubmit(event) {
             toSubmit = false;
         }
     }
+
+    if (!toSubmit){
+        return;
+    }
+
+    postData('http://localhost:3000/api/events/', { "name": nameValue(), "description": descValue(), "author": authorValue(), "dates": dateValue()})
+        .then((data) => {
+        console.log(data);
+    });
+}
+
+async function postData (url = "", data ={}) {
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
+    return response.json();
+    
 }
 
 function inputStatus(status, input){
