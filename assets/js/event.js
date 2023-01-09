@@ -1,4 +1,4 @@
-function createEvent(author, name, description, date){
+function createEvent(author, name, description){
     const section =  document.createElement("section");
     section.classList.add("event");
     
@@ -14,13 +14,123 @@ function createEvent(author, name, description, date){
     eventDesc.classList.add("event__desc");
     eventDesc.appendChild(document.createTextNode(description));
       
-    generateTableBody();
+    generateTable;
 
-    generateTableFooter();
-
+    
 }
 
+function generateTable(people, dates){
+    // creates a <table> element, <tbody>, <thead> and <tfoot> element
+    const tbl = document.createElement("table");
+    tbl.classList.add("table__event");
 
+    const tblHead = document.createElement("thead");
+    tblHead.classList.add("event__table__header__group");
+
+    const tblBody = document.createElement("tbody");
+    tblBody.classList.add("event__table__antendees");
+
+    const tblFoot = document.createElement("tfoot");
+    tblFoot.classList.add("event__table__footer");
+    
+  
+    // creating all cells for dates choosen by creator in the table Header
+    for (let i = 0; i < day.length; i++) {
+        
+        const thHead = document.createElement("th");
+        thHead.classList.add("event__table__header");
+
+        tblHead.appendChild(thHead);
+    }
+
+
+    //creating the Body Part
+    for (let j = 0; j < people.length; j++) {
+        const rowBody = document.createElement("tr");
+        rowBody.classList.add("event__table__antendee");
+
+        const tdBodyName = document.createElement("td");
+        tdBodyName.classList.add("event__table__antendee__name");
+        tdBodyName.appendChild(document.createTextNode(attendee.name));
+//aller rechercher dans le Json le nom des personnes qui participent à l'événement
+
+        const tdBodyChoice = document.createElement("td");
+        tdBodyChoice.classList.add("event__table__antendee__choice");
+        let p = people.available ? 'v' : 'x';
+        tdBodyChoice.appendChild(document.createTextNode(p));
+//noter une X si date à laquelle la personne est dispo (si true)
+
+
+        rowBody.appendChild(tdBodyName);
+        rowBody.appendChild(tdBodyChoice);
+
+      }
+
+      
+      // add the row to the end of the table body
+      tblBody.appendChild(rowBody);
+      //add the table Body to the table
+      tbl.appendChild(tblBody);
+    
+  
+//construction table Footer
+    const rowFoot = document.createElement("tr");  
+    const tdFootInput = document.createElement("td");
+    const attendeeInput = document.querySelector("attendee-input");
+
+    attendeeInput.setAttribute("type", "text");
+    attendeeInput.setAttribute("name", "attendee");
+    attendeeInput.setAttribute("placeholder", "name");
+
+    tdFootInput.appendChild(attendeeInput);
+    rowFoot.appendChild(tdFootInput);
+    tblFoot.appendChild(rowFoot);
+
+    
+    const tdFormControl = document.createElement("td");
+    const divFormControl = document.createElement("div");
+    divFormControl.classList.add("form-control");
+
+    const labelFormControl = document.createElement('label');
+    labelFormControl.setAttribute("for", "choice");
+    labelFormControl.classList.add("form-label");
+
+    divFormControl.appendChild(labelFormControl);
+
+
+    const inputFormControl = document.createAttribute('input');
+    inputFormControl.setAttribute("type", "radio");
+    inputFormControl.setAttribute("name", "choice");
+
+
+    divFormControl.appendChild(inputFormControl);
+    tdFormControl.appendChild(divFormControl);
+    rowFoot.appendChild(tdFormControl);
+
+    tblFoot.appendChild(rowFoot);
+
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblFoot);
+
+    // appends <table> into <body>
+    document.body.appendChild(tbl);
+  
+};
+
+
+    let saveButton = document.getElementById('save-choice-btn');
+    let body = document.querySelector('body');
+    let submit = document.querySelector('.form-submit-btn');
+    submit.addEventListener('click', createEvent);
+
+
+
+
+
+
+
+
+/*
 function generateTableBody(day){
     let htmlCode =
     `<table class="event__table">
@@ -40,7 +150,8 @@ function generateTableBody(day){
     </table>`;
 
     
-    let saveButton = document.querySelector('content-save-choice-btn');
+    let saveButton = document.querySelector('.content-save-choice-btn');
+    let body=document.querySelector('body');
     let insertHtml = body.insertBefore(htmlCode, saveButton);
 
     insertHtml;
@@ -66,12 +177,11 @@ function generateTableFooter(){
     insertTableFooter.insertAdjacentElement(htmlFoot);
 }
 
-let body=document.querySelector('body');
-/*body.addEventListener('load', createEvent);*/
+
 
 let submit = document.querySelector('.form-submit-btn');
 submit.addEventListener('click', createEvent);
-
+*/
 /*
 function generateTable(day, people, ) {
     // creates a <table> element, <tbody>, <thead> and <tfoot> element
