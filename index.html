@@ -20,7 +20,71 @@
             <button class="new-event-btn">Add an Event</button>
         </div>
 
-    <section class="event">
+        <section class="event">
+                <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
+                <p class="event__desc">Come feast with me, there will be free kosher food.</p>
+                <table class="event__table">
+                    <thead class="event__table__header-group">
+                        <th></th>
+                        <th class="event__table__header">11/12/2024</th>
+                        <th class="event__table__header">07/01/2025</th>
+                        <th></th>
+                    </thead>
+                    <tbody class="event__table__antendees">
+                        <tr class="event__table__antendee">
+                            <td class="event__table__antendee__name">Michou</td>
+                            <td class="event__table__antendee__choice">x</td>
+                            <td class="event__table__antendee__choice" >x</td>
+                        </tr>
+                        <tr class="event__table__antendee">
+                            <td class="event__table__antendee__name">Barbara</td>
+                            <td class="event__table__antendee__choice">x</td>
+                            <td class="event__table__antendee__choice">x</td>
+                        </tr>
+                        <tr class="event__table__antendee">
+                            <td class="event__table__antendee__name">Kevin Spicy</td>
+                            <td class="event__table__antendee__choice">x</td>
+                            <td class="event__table__antendee__choice">x</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="event__table__footer">
+                        <tr>
+                            <td><input class="attendee-input" type="text" name="attendee" placeholder="Name"></td>
+                            <td>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">Yes</label>
+                                    <input type="radio" name="choice" >
+                                </div>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">No</label>
+                                    <input type="radio" name="choice">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">Yes</label>
+                                    <input type="radio" name="choice">
+                                </div>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">No</label>
+                                    <input type="radio" name="choice">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="content-save-choice-btn">
+                                    <button id="save-choice-btn" class="save-choice-btn" >Save</button>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <button id="event-delete-btn" class="event__delete-btn">Delete</button>
+                <button id="event-edit-btn" class="event__edit-btn">Edit</button>
+            </section>
+
+        <section class="event">
             <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
             <p class="event__desc">Come feast with me, there will be free kosher food.</p>
             <table class="event__table">
@@ -28,12 +92,13 @@
                     <th></th>
                     <th class="event__table__header">11/12/2024</th>
                     <th class="event__table__header">07/01/2025</th>
+                    <th></th>
                 </thead>
                 <tbody class="event__table__antendees">
                     <tr class="event__table__antendee">
                         <td class="event__table__antendee__name">Michou</td>
                         <td class="event__table__antendee__choice">x</td>
-                        <td class="event__table__antendee__choice">x</td>
+                        <td class="event__table__antendee__choice" >x</td>
                     </tr>
                     <tr class="event__table__antendee">
                         <td class="event__table__antendee__name">Barbara</td>
@@ -69,13 +134,15 @@
                                 <input type="radio" name="choice2">
                             </div>
                         </td>
+                        <td>
+                            <div class="content-save-choice-btn">
+                                <button id="save-choice-btn" class="save-choice-btn" >Save</button>
+                            </div>
+                        </td>
                         
                     </tr>
                 </tfoot>
             </table>
-            <div class="content-save-choice-btn">
-                <button id="save-choice-btn" class="save-choice-btn" >Save</button>
-            </div>
 
             <div class="button">
                 <button id="event-delete-btn" class="event__delete-btn">Delete</button>
