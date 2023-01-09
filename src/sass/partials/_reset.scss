@@ -11,6 +11,10 @@ html{
     box-sizing: inherit;
 }
 
+body{
+    font-family: $roboto;
+}
+
 input,
 button{
     font: inherit;
