@@ -117,19 +117,6 @@ function generateTable(people, dates){
   
 };
 
-
-    let saveButton = document.getElementById('save-choice-btn');
-    let body = document.querySelector('body');
-    let submit = document.querySelector('.form-submit-btn');
-    submit.addEventListener('click', createEvent);
-
-
-
-
-
-
-
-
 /*
 function generateTableBody(day){
     let htmlCode =

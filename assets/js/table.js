@@ -1,6 +1,4 @@
-let submit = document.getElementById("form-submit-btn")
 
-submit.addEventListener('click', showPart);
 function showPart() {
     fetch("http://localhost:3000/api/events")
     .then((response) => response.json())

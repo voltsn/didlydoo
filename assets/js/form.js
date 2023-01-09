@@ -10,14 +10,7 @@ btn.addEventListener("click", showForm);
 cross.addEventListener("click", closeForm);
 form.addEventListener("submit", handleFormSubmit);
 addDateBtn.addEventListener("click", addDate);
-submit.addEventListener('click', submitEvent);
 
-function submitEvent() {
-    authorValue();
-    nameValue();
-    descValue();
-    dateValue();
-}
 
 function dateValue() {
     const date = document.querySelectorAll('input[type=date]');
