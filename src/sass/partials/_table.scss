@@ -1,3 +1,4 @@
+
 .event{
     margin: 0 auto;
     max-width: 35rem;
@@ -54,14 +55,11 @@
     tr:nth-child(even){
         background-color: white;
     }
-
-    td{
-        width : 40vw;
-    }
     
-.event__table__header-group{
+    .event__table__header-group{
     background-color: $bleu_fonce;
     color: white;
+
         .event__table__header{
             font-size : 1.2rem;
             padding : 0.8rem;
@@ -75,11 +73,12 @@
 .event__table__antendee{
     font-size: 1.2rem;
     height : 3rem;
+   
 
     .event__table__antendee__name{
-    padding : 1rem;
+    padding : 1em;
+
     }
-    
     .event__table__antendee__choice{
     text-align: center;
     }
@@ -87,15 +86,15 @@
 
 
 .event__table__footer{
-    //position : relative;
-    //padding-bottom: 50rem;
-
     .attendee-input{
         color : $bleu_fonce;
         font-style: italic;
-        padding: 0.4rem;
-        border-radius: 10px;
-        width : 30vw;
+        padding: 0.4em;
+        border-radius: 0.625rem;
+        width : 100%;
+        border: 1px solid $fond;
+        margin-left: 1em;
+        
     }
 
     .form-control{
@@ -104,14 +103,28 @@
         justify-content: center;
         gap: .6em;
         font-family: $roboto ;
-        padding-left: 2rem;
-        padding-top:0.6rem;
-        padding-bottom:0.6rem;
+        & + .form-control{
+            margin-top: .6em;
+        }
+    }
 
-        input{
-           margin-left: 1.2rem;
+    
+    
+}
+.content-save-choice-btn{
+    display: flex;
+    justify-content: center;
+    .save-choice-btn{
+        padding: 1em;
+        cursor: pointer;
+        border: none;
+        border-radius: .5rem;
+        background-color: $jaune_clair;
+        font-size: .875rem;
+
+        &:hover{
+            background: $bleu_clair;
+            color: #fff;
         }
     }
 }
-
-

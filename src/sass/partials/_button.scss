@@ -1,65 +1,119 @@
-// Button Add Event
-.new-event-btn-container{
-    display: flex;
-    justify-content: $center;
-    padding-bottom: 5%;
-    .new-event-btn{
-        padding: 2%;
+.event-form {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: $fond;
+    padding: 20px;
+    border-radius: 5%;
+    color: #fff;
+    width: 90%;
+    max-width: 26rem;
+
+    .form-submit-btn{
+        padding: 0.5vh; 
         cursor: pointer;
-        border: none;
-        border-radius: 20px;
-        background-color: $jaune_clair;
-        width: 20vw;
     }
-}
-// Button Save
-.content-save-choice-btn{
-    display: flex;
-    justify-content: center;
-    .save-choice-btn{
-        //position : absolute;
-        //bottom : -10vw;
-        //left: 2vw;
-        //margin-left: -77vw;
-        //margin-bottom: -35vw;
-        font-family: $roboto;
-        padding: 1rem;
-        cursor: pointer;
-        border: none;
-        border-radius: 20px;
-        background-color: $jaune_clair;
-        width: 8rem;
+    
+    .form-text-input{
+        border: black;
+        padding: 2vw;
+        outline: 1px solid white;
+        margin-top: .4em;
+        &[type="date"]{
+            color: rgb(105, 105, 105);
+        }
+    }
+    
+    .form-control{
+        position: relative;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        margin: 1vh;
+    }
+
+    .add-date-btn,
+    .form-submit-btn{
+        border: none;
+        background-color: $jaune_clair;
+        border-radius: .5rem;
+        cursor: pointer;
+        color: #1c1c1c;
     
         &:hover{
-            background: $jaune_fonce;
+            // opacity: 0.6;
+            color: #fff;
+            background-color: $bleu_fonce;
         }
-    
-        &:active{
-            background: $bleu_clair;
-        }
-        }
+    }
+
+    .add-date-btn{
+        align-self: flex-start;
+        padding: .5em 1em;
+        margin-top: .5rem;
+        font-size: .9rem;
+    }
+
+    .form-submit-btn{
+        align-self: center;
+        padding: .5em 3em;
+        margin-top: 1.5rem;
+    }
 }
 
-.button{
-    display: flex;
-    justify-content: center;
-    padding: 4rem 0 1rem 0;
-    gap: 3rem;
+.form-control.error{
+    padding-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 
-// Button Delete
-.event__delete-btn, .event__edit-btn{
-    font-family: $roboto;
-    padding: 1rem;
+.form-control.error::after {
+    content: attr(data-after);
+    position:  absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1em;
+    font-size: .8rem;
+    color: red;
+}
+
+.cross{
     cursor: pointer;
-    border: none;
-    border-radius: 20px;
-    background-color: red;
+    width: 35px;
+    height: 35px;
+    transform: scale(1.3);
+    align-self: end;
+    &::before{
+        background: $jaune_clair;
+        position: absolute;
+        display:block;
+        content:'';
+        width: 70%;
+        height: 6%;
+        top: 47%;
+        left: 15%;
+        transform: rotate(45deg);
+    } 
+    &::after{
+        background: $jaune_clair;
+        position: absolute;
+        display:block;
+        content:'';
+        width: 6%;
+        height: 70%;
+        left: 47%;
+        top: 15%;
+        transform: rotate(45deg);
+    } 
 }
 
-// Button Edit
-.event__edit-btn{
-    background-color: gray;
+@media screen and (min-width:620px){
+
+    .event-form {
+
+        .form-text-input{
+            padding: 1vw;
+        }
+    }
 }
