@@ -4,11 +4,53 @@ let btn = document.querySelector('.new-event-btn');
 let form = document.querySelector('#event-form');
 let cross = document.querySelector('.cross');
 const addDateBtn = document.querySelector('#add-date-btn');
+let submit = document.querySelector('.form-submit-btn');
 
 btn.addEventListener("click", showForm);
 cross.addEventListener("click", closeForm);
 form.addEventListener("submit", handleFormSubmit);
 addDateBtn.addEventListener("click", addDate);
+submit.addEventListener('click', submitEvent);
+
+function submitEvent() {
+    authorValue();
+    nameValue();
+    descValue();
+    dateValue();
+}
+
+function dateValue() {
+    const date = document.querySelectorAll('input[type=date]');
+    let tableDate = [];
+    for (let i = 0; i < date.length; i++) {
+        const dateValue = date[i].value;
+        console.log(dateValue);
+        tableDate.push(date[i].value);
+    };
+    console.log(tableDate);
+    return tableDate
+}
+
+function descValue() {
+    const desc = document.querySelector('textarea[name=description]');
+    const descValue = desc.value;
+    console.log(descValue);
+    return desc.value;
+}
+
+function nameValue() {
+    const name = document.querySelector('input[name=name]');
+    const nameValue = name.value;
+    console.log(nameValue);
+    return name.value;
+}
+
+function authorValue() {
+    const author = document.querySelector('input[name=author]');
+    const authorValue = author.value;
+    console.log(authorValue);
+    return author.value;
+}
 
 function showForm() {
     form.style.display = 'flex';
@@ -35,7 +77,7 @@ function handleFormSubmit(event) {
     const textInputs = this.querySelectorAll("input[type=text]");
     const dateInputs = this.querySelectorAll("input[type=date]");
     let toSubmit = true;
-
+    
     for (let textInput of textInputs) {
         let error = isInputValid(textInput.value);
         inputStatus(error, textInput);
@@ -52,6 +94,29 @@ function handleFormSubmit(event) {
             toSubmit = false;
         }
     }
+
+    if (!toSubmit){
+        return;
+    }
+
+    postData('http://localhost:3000/api/events/', { "name": nameValue(), "description": descValue(), "author": authorValue(), "dates": dateValue()})
+        .then((data) => {
+        console.log(data);
+    });
+}
+
+async function postData (url = "", data ={}) {
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+
+    return response.json();
+    
 }
 
 function inputStatus(status, input){

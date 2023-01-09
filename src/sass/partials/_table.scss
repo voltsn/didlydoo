@@ -1,16 +1,39 @@
+
 .event{
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    margin: 3rem;
-    padding : 3rem;
+    margin: 0 auto;
+    max-width: 35rem;
+    width: 95%;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    overflow-x: scroll;
+
+    .event__delete-btn,
+    .event__edit-btn{
+        cursor: pointer;
+        border: none;
+        padding: .5em 1em;
+        border-radius: .5rem;
+        color: #fff;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    
+    .event__delete-btn{
+        margin-top: 2rem;
+        background-color: #f23a3a;
+        
+    }
+    .event__edit-btn{
+        background-color: $bleu_fonce;
+    }
 }
 
 .event__heading{
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 0.6479rem + 1.5023vw, 2rem);
     color :black;
     font-family: $roboto;
-    margin : 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: .6em;
 }
 
 .event__desc{
@@ -18,39 +41,29 @@
     color : black;
     font-family: $roboto;
     font-style: italic;
-    margin: 0.5rem;
-    margin-bottom: 2rem;
-
+    margin-bottom: 1em;
 }
 
 
 .event__table{
     border-collapse: collapse;
     overflow:hidden ;
-    border-radius: 15px;
+    border-top-left-radius: 0.9375rem;
+    border-top-right-radius: 0.9375rem;
     padding : 1rem;
-    margin : 0.5rem;
     
-    th{
-        width : 40vw;
-        
+    tr:nth-child(even){
+        background-color: white;
     }
-
-    td{
-        width : 40vw;
-    }
-
     
     .event__table__header-group{
     background-color: $bleu_fonce;
     color: white;
-    
-    
 
         .event__table__header{
-        font-family: $roboto;
-        font-size : 1rem;
-        padding : 0.8rem;
+            font-size : 1.2rem;
+            padding : 0.8rem;
+            width: 100%;
         }
     
     }
@@ -58,51 +71,40 @@
 }
 
 .event__table__antendee{
-    font-family: $roboto;
     font-size: 1.2rem;
     height : 3rem;
    
 
     .event__table__antendee__name{
-    padding : 1rem;
+    padding : 1em;
 
     }
     .event__table__antendee__choice{
-    font-family: $roboto;
     text-align: center;
     }
-    
-    
 }
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-} 
 
 
 .event__table__footer{
-  
     .attendee-input{
         color : $bleu_fonce;
         font-style: italic;
-        padding: 0.4rem;
-        border-radius: 10px;
-        width : 30vw;
-        margin-left: 0.5rem;
+        padding: 0.4em;
+        border-radius: 0.625rem;
+        width : 100%;
+        border: 1px solid $fond;
+        margin-left: 1em;
         
     }
 
     .form-control{
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6em;
         font-family: $roboto ;
-        padding-left: 2rem;
-        padding-top:0.6rem;
-        padding-bottom:0.6rem;
-
-        input{
-           transform: translateX(0.5rem);
-           margin-left: 1.2rem;
-           
+        & + .form-control{
+            margin-top: .6em;
         }
     }
 
@@ -113,29 +115,16 @@ tr:nth-child(even) {
     display: flex;
     justify-content: center;
     .save-choice-btn{
-        //position : absolute;
-        //bottom : -10vw;
-        //left: 2vw;
-        //margin-left: -77vw;
-        //margin-bottom: -35vw;
-        font-family: $roboto;
-        padding: 1rem;
+        padding: 1em;
         cursor: pointer;
         border: none;
-        border-radius: 20px;
+        border-radius: .5rem;
         background-color: $jaune_clair;
-        width: 8rem;
-        display: flex;
-        justify-content: center;
-    
+        font-size: .875rem;
+
         &:hover{
-            background: $jaune_fonce;
-        }
-    
-        &:active{
             background: $bleu_clair;
+            color: #fff;
         }
-        }
+    }
 }
-
-

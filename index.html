@@ -9,6 +9,7 @@
     <script src="assets/js/availability.js" defer></script>
     <script src="assets/js/event.js" defer></script>
 
+    <script src="assets/js/table.js" defer></script>
     <title>Didlydoo</title>
 </head>
 <body>
@@ -21,7 +22,71 @@
             <button class="new-event-btn">Add an Event</button>
         </div>
 
-    <section class="event">
+        <section class="event">
+                <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
+                <p class="event__desc">Come feast with me, there will be free kosher food.</p>
+                <table class="event__table">
+                    <thead class="event__table__header-group">
+                        <th></th>
+                        <th class="event__table__header">11/12/2024</th>
+                        <th class="event__table__header">07/01/2025</th>
+                        <th></th>
+                    </thead>
+                    <tbody class="event__table__antendees">
+                        <tr class="event__table__antendee">
+                            <td class="event__table__antendee__name">Michou</td>
+                            <td class="event__table__antendee__choice">x</td>
+                            <td class="event__table__antendee__choice" >x</td>
+                        </tr>
+                        <tr class="event__table__antendee">
+                            <td class="event__table__antendee__name">Barbara</td>
+                            <td class="event__table__antendee__choice">x</td>
+                            <td class="event__table__antendee__choice">x</td>
+                        </tr>
+                        <tr class="event__table__antendee">
+                            <td class="event__table__antendee__name">Kevin Spicy</td>
+                            <td class="event__table__antendee__choice">x</td>
+                            <td class="event__table__antendee__choice">x</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="event__table__footer">
+                        <tr>
+                            <td><input class="attendee-input" type="text" name="attendee" placeholder="Name"></td>
+                            <td>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">Yes</label>
+                                    <input type="radio" name="choice" >
+                                </div>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">No</label>
+                                    <input type="radio" name="choice">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">Yes</label>
+                                    <input type="radio" name="choice">
+                                </div>
+                                <div class="form-control">
+                                    <label for="choice" class="form-label">No</label>
+                                    <input type="radio" name="choice">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="content-save-choice-btn">
+                                    <button id="save-choice-btn" class="save-choice-btn" >Save</button>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <button id="event-delete-btn" class="event__delete-btn">Delete</button>
+                <button id="event-edit-btn" class="event__edit-btn">Edit</button>
+            </section>
+
+        <section class="event">
             <h2 class="event__heading">Jean-Rene's Bar-Mitzvah</h2>
             <p class="event__desc">Come feast with me, there will be free kosher food.</p>
           
@@ -30,12 +95,13 @@
                     <th></th>
                     <th class="event__table__header">11/12/2024</th>
                     <th class="event__table__header">07/01/2025</th>
+                    <th></th>
                 </thead>
                 <tbody class="event__table__antendees">
                     <tr class="event__table__antendee">
                         <td class="event__table__antendee__name">Michou</td>
                         <td class="event__table__antendee__choice">x</td>
-                        <td class="event__table__antendee__choice">x</td>
+                        <td class="event__table__antendee__choice" >x</td>
                     </tr>
                     <tr class="event__table__antendee">
                         <td class="event__table__antendee__name">Barbara</td>
@@ -63,25 +129,28 @@
                         </td>
                         <td>
                             <div class="form-control">
-                                <label for="choice" class="form-label">Yes</label>
-                                <input type="radio" name="choice">
+                                <label for="choice2" class="form-label">Yes</label>
+                                <input type="radio" name="choice2">
                             </div>
                             <div class="form-control">
-                                <label for="choice" class="form-label">No</label>
-                                <input type="radio" name="choice">
+                                <label for="choice2" class="form-label">No</label>
+                                <input type="radio" name="choice2">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="content-save-choice-btn">
+                                <button id="save-choice-btn" class="save-choice-btn" >Save</button>
                             </div>
                         </td>
                         
                     </tr>
                 </tfoot>
-            </table>-->
+            </table>
 
-            <div class="content-save-choice-btn">
-                <button id="save-choice-btn" class="save-choice-btn" >Save</button>
+            <div class="button">
+                <button id="event-delete-btn" class="event__delete-btn">Delete</button>
+                <button id="event-edit-btn" class="event__edit-btn">Edit</button>
             </div>
-
-            <button id="event-delete-btn" class="event__delete-btn">Delete</button>
-            <button id="event-edit-btn" class="event__edit-btn">Edit</button>
         </section>
 
         <form method="post" id="event-form" class="event-form">
@@ -90,15 +159,15 @@
             </div>
             <div class="form-control">
                 <label class="form-label" for="author">Author:</label>
-                <input class="form-text-input" type="text" name="author" id="author" required>
+                <input class="form-text-input" placeholder="Name author" type="text" name="author" id="author" required>
             </div>
             <div class="form-control">
                 <label class="form-label" for="name">Name:</label>
-                <input class="form-text-input" type="text" name="name" id="name" required>
+                <input class="form-text-input" placeholder="Your name" type="text" name="name" id="name" required>
             </div>
             <div class="form-control">
                 <label class="form-label" for="description">Description:</label>
-                <textarea class="form-text-input" maxlength="256" type="text" name="description" id="description" required></textarea>
+                <textarea class="form-text-input" placeholder="Small description | Max 256 text" maxlength="256" type="text" name="description" id="description" required></textarea>
             </div>
             <div class="form-control">
                 <label class="form-label" for="date">Date:</label>
@@ -106,7 +175,7 @@
                 <button class="add-date-btn" id="add-date-btn">Add date</button>
             </div>
             <div class="form-control">
-                <input class="form-submit-btn" class="form-submit" type="submit" value="Submit">
+                <input class="form-submit-btn" id="form-submit-btn" class="form-submit" type="submit" value="Submit">
             </div>
         </form>
         

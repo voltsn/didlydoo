@@ -5,13 +5,16 @@ let save = document.querySelector('#save-choice-btn');
 save.addEventListener('click', addLine)
 
 function addLine() {
-
+    let input = document.querySelector('.attendee-input');
+    let inputValue = input.value;
+        input.value = "";
+        
 
     let tbody = document.querySelector('.event__table__antendees');
-    fetch('package.json')
+    fetch('server/db/db.json')
         .then((response) => response.json())
         .then((data) => {
-            let element = data[0];
+            let element = data;
                 let tr = `
                 <tr class="event__table__antendee">
                     <td class="event__table__antendee__name">${inputValue}</td>
@@ -21,5 +24,6 @@ function addLine() {
             `;
             tbody.insertAdjacentHTML("beforeend", tr);
         });
+
 }
 
