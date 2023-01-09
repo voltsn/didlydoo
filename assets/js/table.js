@@ -5,7 +5,6 @@ function showPart() {
     fetch("http://localhost:3000/api/events")
     .then((response) => response.json())
     .then((text) => {
-        console.log(text[0].id)
         for (let i=0; i<text.length; i++) {
 
             // Création de la div
