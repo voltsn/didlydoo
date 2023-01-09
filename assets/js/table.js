@@ -32,8 +32,7 @@ function showPart() {
                 textContent = date.date;
                 div.appendChild(document.createTextNode(textContent));
                 for (let attendee of date.attendees){
-                    console.log(attendee.name, attendee.available);
-
+                    div.appendChild(document.createTextNode(attendee.name, attendee.available));
                 }
             }
 
