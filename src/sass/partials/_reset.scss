@@ -1,0 +1,21 @@
+html{
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: $roboto;
+}
+
+input,
+button{
+    font: inherit;
+}
