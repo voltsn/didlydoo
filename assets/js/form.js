@@ -78,18 +78,6 @@ function handleFormSubmit(event) {
     const dateInputs = this.querySelectorAll("input[type=date]");
     let toSubmit = true;
 
-    // let data = new FormData(form);
-    // let xhr = new XMLHttpRequest();
-    // xhr.open('POST', 'http://localhost:3000/api/events/');
-    // xhr.send(data);
-    // xhr.onload = function () {
-    //     if(xhr.status === 200){
-    //         console.log(true);
-    //     } else {
-    //         console.log(false);
-    //     }
-    // }
-
     async function postData (url = "", data ={}) {
         const response = await fetch(url, {
             method: 'POST',
