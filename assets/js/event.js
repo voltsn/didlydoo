@@ -1,4 +1,4 @@
-function createEvent(author, name, description){
+function createEvent(author, name, description, people, dates){
     const section =  document.createElement("section");
     section.classList.add("event");
     
@@ -13,13 +13,21 @@ function createEvent(author, name, description){
     const eventDesc = document.createElement("p");
     eventDesc.classList.add("event__desc");
     eventDesc.appendChild(document.createTextNode(description));
+
+    const table = generateTable(people, dates);
       
-    generateTable;
+    // generateTable;
+    section.appendChild(eventHeading);
+    section.appendChild(eventAuthor);
+    section.appendChild(eventDesc);
+    section.appendChild(table);
+    return section;
 
     
 }
 
 function generateTable(people, dates){
+    console.log(dates);
     // creates a <table> element, <tbody>, <thead> and <tfoot> element
     const tbl = document.createElement("table");
     tbl.classList.add("table__event");
@@ -35,18 +43,21 @@ function generateTable(people, dates){
     
   
     // creating all cells for dates choosen by creator in the table Header
-    for (let i = 0; i < day.length; i++) {
+    for (let i = 0; i < dates.length; i++) {
         
         const thHead = document.createElement("th");
         thHead.classList.add("event__table__header");
+        thHead.appendChild(document.createTextNode(dates[i]));
 
         tblHead.appendChild(thHead);
     }
 
+    tbl.appendChild(tblHead);
+
 
     //creating the Body Part
+    const rowBody = document.createElement("tr");
     for (let j = 0; j < people.length; j++) {
-        const rowBody = document.createElement("tr");
         rowBody.classList.add("event__table__antendee");
 
         const tdBodyName = document.createElement("td");
@@ -76,7 +87,8 @@ function generateTable(people, dates){
 //construction table Footer
     const rowFoot = document.createElement("tr");  
     const tdFootInput = document.createElement("td");
-    const attendeeInput = document.querySelector("attendee-input");
+    const attendeeInput = document.createElement("input","attendee-input");
+    attendeeInput.classList.add("attendee-input");
 
     attendeeInput.setAttribute("type", "text");
     attendeeInput.setAttribute("name", "attendee");
@@ -98,7 +110,7 @@ function generateTable(people, dates){
     divFormControl.appendChild(labelFormControl);
 
 
-    const inputFormControl = document.createAttribute('input');
+    const inputFormControl = document.createElement('input');
     inputFormControl.setAttribute("type", "radio");
     inputFormControl.setAttribute("name", "choice");
 
@@ -114,15 +126,11 @@ function generateTable(people, dates){
 
     // appends <table> into <body>
     document.body.appendChild(tbl);
+    return tbl;
   
 };
 
-
-    let saveButton = document.getElementById('save-choice-btn');
-    let body = document.querySelector('body');
-    let submit = document.querySelector('.form-submit-btn');
-    submit.addEventListener('click', createEvent);
-
+export {createEvent};
 
 
 

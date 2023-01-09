@@ -1,6 +1,5 @@
-let submit = document.getElementById("form-submit-btn")
+import {createEvent} from "./event.js";
 
-submit.addEventListener('click', showPart);
 function showPart() {
     fetch("http://localhost:3000/api/events")
     .then((response) => response.json())
@@ -11,21 +10,24 @@ function showPart() {
             const div = document.createElement('div');
 
             // Création de nos paragraphes avec nos éléments du json
-            const name = document.createElement('p')
-            const description = document.createElement('p');
-            const author = document.createElement('p');
-            const dates = document.createElement('p');
-            const attendees = document.createElement('p');
+            // const name = document.createElement('p')
+            // const description = document.createElement('p');
+            // const author = document.createElement('p');
+            // const dates = document.createElement('p');
+            // const attendees = document.createElement('p');
 
-            name.textContent = text[i].name;
-            description.textContent = text[i].description;
-            author.textContent = text[i].author;
-            dates.textContent;
-            attendees.textContent;
+            // name.textContent = text[i].name;
+            // description.textContent = text[i].description;
+            // author.textContent = text[i].author;
+            // dates.textContent;
+            // attendees.textContent;
 
-            div.appendChild(name);
-            div.appendChild(description);
-            div.appendChild(author); 
+            // div.appendChild(name);
+            // div.appendChild(description);
+            // div.appendChild(author); 
+            // const event = createEvent(text[i].author, text[i].name, text[i].description);
+            // console.log(event);
+            // const table = generateTable()
 
 
             for (let date of text[i].dates){

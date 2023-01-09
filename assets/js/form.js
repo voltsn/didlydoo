@@ -1,23 +1,57 @@
+import {createEvent} from "./event.js";
 import {isInputValid, isDateValid} from "./inputValidation.js";
 
 let btn = document.querySelector('.new-event-btn');
 let form = document.querySelector('#event-form');
 let cross = document.querySelector('.cross');
-const addDateBtn = document.querySelector('#add-date-btn');
-let submit = document.querySelector('.form-submit-btn');
+let addDateBtn = document.querySelector('#add-date-btn');
 
 btn.addEventListener("click", showForm);
 cross.addEventListener("click", closeForm);
 form.addEventListener("submit", handleFormSubmit);
 addDateBtn.addEventListener("click", addDate);
-submit.addEventListener('click', submitEvent);
 
-function submitEvent() {
-    authorValue();
-    nameValue();
-    descValue();
-    dateValue();
-}
+
+function showPart() {
+    fetch("http://localhost:3000/api/events")
+    .then((response) => response.json())
+    .then((text) => {
+        for (let i=0; i<text.length; i++) {
+
+            // Création de la div
+            const div = document.createElement('div');
+
+            // Création de nos paragraphes avec nos éléments du json
+            // const name = document.createElement('p')
+            // const description = document.createElement('p');
+            // const author = document.createElement('p');
+            // const dates = document.createElement('p');
+            // const attendees = document.createElement('p');
+
+            // name.textContent = text[i].name;
+            // description.textContent = text[i].description;
+            // author.textContent = text[i].author;
+            // dates.textContent;
+            // attendees.textContent;
+
+            // div.appendChild(name);
+            // div.appendChild(description);
+            // div.appendChild(author); 
+
+
+            for (let date of text[i].dates){
+                textContent = date.date;
+                div.appendChild(document.createTextNode(textContent));
+                for (let attendee of date.attendees){
+                    console.log(attendee.name, attendee.available);
+
+                }
+            }
+
+            document.body.appendChild(div);
+        }
+    });
+};
 
 function dateValue() {
     const date = document.querySelectorAll('input[type=date]');
@@ -34,14 +68,14 @@ function dateValue() {
 function descValue() {
     const desc = document.querySelector('textarea[name=description]');
     const descValue = desc.value;
-    console.log(descValue);
+  
     return desc.value;
 }
 
 function nameValue() {
     const name = document.querySelector('input[name=name]');
     const nameValue = name.value;
-    console.log(nameValue);
+    
     return name.value;
 }
 
@@ -99,10 +133,20 @@ function handleFormSubmit(event) {
         return;
     }
 
-    postData('http://localhost:3000/api/events/', { "name": nameValue(), "description": descValue(), "author": authorValue(), "dates": dateValue()})
-        .then((data) => {
-        console.log(data);
-    });
+    let name = nameValue();
+    let author = authorValue();
+    let description = descValue();
+    let dates = dateValue();
+
+    // postData('http://localhost:3000/api/events/', { "name": nameValue(), "description": descValue(), "author": authorValue(), "dates": dateValue()})
+    //     .then((data) => {
+    //     // console.log(data);
+    // });
+    
+    const userEvent = createEvent(name, author, description, [], dates);
+    document.body.appendChild(userEvent);
+    console.log(userEvent.children);
+    
 }
 
 async function postData (url = "", data ={}) {
